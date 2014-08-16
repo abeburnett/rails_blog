@@ -10,15 +10,7 @@
 = render @article.comments
 
 %h2 Add a comment:
-= form_for([@article, @article.comments.build]) do |f|
-  %p
-    = f.label :commenter
-    = f.text_field :commenter
-  %p
-    = f.label :body
-    = f.text_area :body
-  %p
-    = f.submit
+= render "comments/form"
 
 
 = link_to 'Back to Articles', articles_path
